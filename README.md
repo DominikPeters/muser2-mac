@@ -2,7 +2,7 @@
 
 ## Version with compile fixes for Mac
 
-These are the changes I had to make to get MUSer2 to compile on MacOS, including
+These are [the changes](https://github.com/DominikPeters/muser2-mac/commit/092f550d59b9357f85862ef4bd64dcd5c888de6c) I had to make to get MUSer2 to compile on MacOS, including
 on M1 Macs.
 
 ```
@@ -15,10 +15,10 @@ make
 The changed files are:
 
 - [Makefile](src/tools/muser2/Makefile)
-- [makefile-common-defs](/Users/dominik/GitHub/muser2-mac/src/mkcfg/makefile-common-defs)
-    - In line 13 of this file, in the definition of CXX, the reference to homebrew's
+- [makefile-common-defs](src/mkcfg/makefile-common-defs#L13)
+    - In line 13 of this file, in the definition of `CXX`, the reference to homebrew's
       copy of `libstdc++.6.dylib` may need to be updated for your system.
-- For each solver, a small change to the [SolverTypes.h](/Users/dominik/GitHub/muser2-mac/src/extsrc/minisat-hmuc/core/SolverTypes.h) file (5 times).
+- For each solver, a small change to the `SolverTypes.h` file (5 times, [see commit](https://github.com/DominikPeters/muser2-mac/commit/092f550d59b9357f85862ef4bd64dcd5c888de6c)).
 
 
 ## Original README file follows
