@@ -2,9 +2,9 @@
 
 ## Version with compile fixes for Mac
 
-These are [the changes](https://github.com/DominikPeters/muser2-mac/commit/092f550d59b9357f85862ef4bd64dcd5c888de6c) I had to make to get MUSer2 to compile on MacOS, including
-on M1 Macs.
+This repository contains the source of [MUSer2](https://bitbucket.org/anton_belov/muser2/src/master/) (cloned 2021-12-19, last bitbucket commit 2017-12-26), with several [changes](https://github.com/DominikPeters/muser2-mac/commit/092f550d59b9357f85862ef4bd64dcd5c888de6c) I had to make to get MUSer2 to compile on MacOS, including on M1 Macs. 
 
+After updating [makefile-common-defs](src/mkcfg/makefile-common-defs#L13) (see below), build using:
 ```
 brew install boost gcc
 mkdir src/extutil/
@@ -20,7 +20,7 @@ The changed files are:
 - [makefile-common-defs](src/mkcfg/makefile-common-defs#L13)
     - In line 13 of this file, in the definition of `CXX`, the reference to homebrew's
       copy of `libstdc++.6.dylib` may need to be updated for your system. You can find
-      the right path using `brew list gcc | grep -F 'libstdc++.6.dylib'`.
+      the right path using `brew list gcc | grep 'libstdc++.6.dylib'`.
 - For each solver, a small change to the `SolverTypes.h` file (5 times, [see commit](https://github.com/DominikPeters/muser2-mac/commit/092f550d59b9357f85862ef4bd64dcd5c888de6c)).
 
 
