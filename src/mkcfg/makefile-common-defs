@@ -9,8 +9,8 @@
 # Basic definition variables (may be extended in each Makefile)
 #-------------------------------------------------------------------------------
 
-CC         = gcc
-CXX	       = g++ -std=c++11
+CC         = gcc-11
+CXX        = gcc-11 -std=c++11 /opt/homebrew/Cellar/gcc/11.2.0_1/lib/gcc/11/libstdc++.6.dylib
 
 #CC        = clang
 #CXX	     = clang++ --analyze -std=c++11 -stdlib=libstdc++
@@ -55,7 +55,7 @@ else
           CPPFLAGS += -arch i386
           LLIBS += 
      else
-          CPPFLAGS += -arch x86_64
+          #CPPFLAGS += -arch x86_64
      endif
 endif
 

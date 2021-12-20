@@ -24,7 +24,7 @@ PARSEINCS = chkfmt cnffmt gcnffmt vgcnffmt
 # order matters here (keep clset last) because of static libs
 LIBS = mus-2 wraps-2 wraps clset
 
-LFLAGS = -lz
+LFLAGS = -lz -lstdc++
 
 # Order in LNKFLAGS matters (because of static libraries)
 LNKFLAGS := $(LNKFLAGS) $(LFLAGS)
