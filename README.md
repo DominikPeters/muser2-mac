@@ -8,7 +8,7 @@ After updating [makefile-common-defs](src/mkcfg/makefile-common-defs#L13) (see b
 ```shell
 brew install boost gcc
 mkdir src/extutil/
-ln -s /opt/homebrew/Cellar/boost/1.76.0/include src/extutil/include
+ln -s /opt/homebrew/Cellar/boost/1.80.0/include src/extutil/include
 # if that's the wrong path, find yours using: brew list boost
 cd src/tools/muser2
 make
